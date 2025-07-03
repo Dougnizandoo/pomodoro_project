@@ -1,0 +1,116 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+}
+
+body{
+    text-align: center;
+    font-size: 2vh;
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/da0666d8-33c1-4544-bd67-3c8a9d74fd67/devtti2-4bf0c5bd-94b8-4bdd-bfa0-777e195f8f83.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2RhMDY2NmQ4LTMzYzEtNDU0NC1iZDY3LTNjOGE5ZDc0ZmQ2N1wvZGV2dHRpMi00YmYwYzViZC05NGI4LTRiZGQtYmZhMC03NzdlMTk1ZjhmODMuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.rg70CZ8yDuSL4gIUdY6b_Xu9dtqIXewvJBqTPzWemyQ');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    color: #eee;
+    text-shadow: 0 4px 16px;
+    margin: 3vh 0;
+}
+
+#status-div{
+    margin: 1%;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#status-word{
+    margin: 0 1%;
+    font-style: italic;
+}
+
+#status-msg{
+    width: 11vw;
+}
+
+
+main{
+    border: 1px solid #eee;
+    border-radius: 16px;
+    background: rgba(238, 238, 238, 0.4);
+    box-shadow: 0 4px 16px rgba(255, 255, 255, 0.8);
+    height: 60vh;
+    width: 90vw;
+    margin: 2vh 0 15vh 0;
+}
+
+#timer-body,
+#controls-body{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    margin-top: 2vh;
+}
+
+#timer-minutes,
+#timer-seconds{
+    width: 40vw;
+    height: 40vh;
+    color: rgb(0, 0, 0);
+    font-size: 10vh;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    margin: 1% 2%;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(238, 238, 238, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 4px 16px;
+}
+
+button{
+    width: 30vw; /* antes era 100vw — agora cabe melhor no card */
+    height: 6vh;
+    margin: 1rem;
+    font-size: 2.5vh;
+    font-weight: 600;
+    color: #ffffff;
+    background: steelblue;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s, box-shadow 0.3s;
+}
+
+button:hover{
+    background: rgba(70, 130, 180, 0.8);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 8px rgba(70, 130, 180, 0.7);
+}
+
+button:active{
+    transform: scale(0.98);
+    background: rgba(58, 110, 165, 0.8);
+    box-shadow: 0 4px 16px rgba(58, 110, 165, 1);
+}
+
+button:disabled {
+    background: #ccc;
+    color: #666;
+    cursor: not-allowed;
+    box-shadow: none;
+}
