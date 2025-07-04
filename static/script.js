@@ -12,12 +12,14 @@ function toggleStart(){
         btn_control.innerText = "Pause";
         btn_reset.removeAttribute("disabled");
         span_msg.innerText = "Running Pomodoro."
-        span_msg.style.cssText = "color: rgb(11, 102, 35)"
+        span_msg.style.cssText = "color: rgb(11, 102, 35)";
+        main_body.style.cssText = "background: rgba(11, 102, 35, 0.4);";
         is_running = true;
     } else {
         btn_control.innerText = "Start";
         span_msg.innerText = "Pomodoro Paused."
         span_msg.style.cssText = "color: rgb(208, 3, 3)"
+        main_body.style.cssText = "background: rgba(208, 3, 3, 0.4);";
         is_running = false;
     }
 }
@@ -33,6 +35,7 @@ function reset(){
     updateDisplay();
     span_msg.innerText = "Waiting for Start."
     span_msg.style.cssText = "color: rgb(255, 195, 11)"
+    main_body.style.cssText = "background: rgba(238, 238, 238, 0.4);";
 }
 
 
@@ -46,6 +49,7 @@ function clocksTick() {
             is_running = true;
             span_msg.innerText = "Break Time! Good job! :)";
             span_msg.style.cssText = "color: rgb(255, 195, 11)"
+            main_body.style.cssText = "background: rgba(255, 195, 11, 0.4);";
             break_time = false;
             updateDisplay();
             return;
@@ -75,6 +79,7 @@ const btn_reset = document.getElementById("btn-reset");
 const timer_min = document.getElementById("timer-minutes");
 const timer_sec = document.getElementById("timer-seconds");
 const span_msg = document.getElementById("status-msg");
+const main_body = document.getElementById("main-body");
 
 // state -----------------------------------------------------
 let is_running = false;
